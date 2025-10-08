@@ -1,6 +1,9 @@
 import { PutObjectCommand, S3Client } from "@aws-sdk/client-s3";
 import { fromCognitoIdentityPool } from "@aws-sdk/credential-provider-cognito-identity";
 import { CognitoIdentityClient } from "@aws-sdk/client-cognito-identity";
+import * as dotenv  from "dotenv"
+
+dotenv.config(); 
 
 function createS3Client(): S3Client {
   try {
